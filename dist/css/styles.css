@@ -1,0 +1,275 @@
+/*!
+ * project-name v0.0.1
+ * A description for your project.
+ * (c) 2020 YOUR NAME
+ * MIT License
+ * http://link-to-your-git-repo.com
+ */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, src/scss/partials/_reset.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 8, src/scss/partials/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 29, src/scss/partials/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 33, src/scss/partials/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 36, src/scss/partials/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 39, src/scss/partials/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 42, src/scss/partials/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 47, src/scss/partials/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 54, src/scss/partials/_reset.scss */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/**********************************************
+ Global Styles
+**********************************************/
+/* line 4, src/scss/partials/_global.scss */
+:root {
+  --text-color: #000;
+  --dark-mode-black: #1E1E1E;
+}
+
+/* line 11, src/scss/partials/_global.scss */
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+  transition: background .3s ease-out;
+}
+
+/* line 18, src/scss/partials/_global.scss */
+body.dark-mode {
+  background: var(--dark-mode-black);
+}
+
+/* line 20, src/scss/partials/_global.scss */
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6, body.dark-mode p, body.dark-mode a {
+  color: #fff;
+}
+
+/* line 24, src/scss/partials/_global.scss */
+body.dark-mode #dark-mode-trigger path {
+  fill: #fff;
+}
+
+/* line 28, src/scss/partials/_global.scss */
+body.dark-mode .bio {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* line 36, src/scss/partials/_global.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  opacity: .6;
+}
+
+/* line 42, src/scss/partials/_global.scss */
+h1 {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 500;
+}
+
+/* line 47, src/scss/partials/_global.scss */
+h2 {
+  font-weight: 500;
+}
+
+/* line 50, src/scss/partials/_global.scss */
+h2, h3, h4, h5, h6, p.large, .projects a {
+  font-size: 24px;
+  line-height: 40px;
+}
+
+/* line 55, src/scss/partials/_global.scss */
+p, a {
+  font-size: 18px;
+  line-height: 24px;
+  opacity: .6;
+}
+
+/* line 59, src/scss/partials/_global.scss */
+p.small, a.small {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* line 65, src/scss/partials/_global.scss */
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* line 70, src/scss/partials/_global.scss */
+.tinted, .projects a {
+  opacity: 0.3;
+}
+
+/* line 74, src/scss/partials/_global.scss */
+h1, h2, h3, h4, h5, h6, p, a {
+  transition: color .3s ease-out;
+}
+
+/* line 80, src/scss/partials/_global.scss */
+.container {
+  margin: 64px auto 268px 64px;
+  display: inline-grid;
+  grid-template-columns: repeat(4, 280px);
+  grid-auto-rows: minmax(280px, auto);
+  grid-gap: 24px;
+  position: relative;
+}
+
+/* line 90, src/scss/partials/_global.scss */
+#dark-mode-trigger {
+  cursor: pointer;
+}
+
+/* line 92, src/scss/partials/_global.scss */
+#dark-mode-trigger path {
+  fill: var(--text-color);
+  transition: fill .3s ease-out;
+}
+
+/* line 98, src/scss/partials/_global.scss */
+.avatar {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 101, src/scss/partials/_global.scss */
+.avatar img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+/* line 109, src/scss/partials/_global.scss */
+.education {
+  grid-column: 4;
+}
+
+/* line 113, src/scss/partials/_global.scss */
+.bio {
+  grid-column: 3 / span 2;
+  background: rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: flex-end;
+  transition: background .3s ease-out;
+}
+
+/* line 119, src/scss/partials/_global.scss */
+.bio h3 {
+  max-width: 80%;
+}
+
+/* line 124, src/scss/partials/_global.scss */
+.contact {
+  position: absolute;
+  grid-area: 2 / 4;
+  right: 0;
+}
+
+/* line 128, src/scss/partials/_global.scss */
+.contact a {
+  display: block;
+  text-align: right;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* line 136, src/scss/partials/_global.scss */
+.projects {
+  grid-area: 4;
+  grid-column: span 2;
+}
+
+/* line 139, src/scss/partials/_global.scss */
+.projects > * {
+  margin-bottom: 8px;
+}
+
+/* line 142, src/scss/partials/_global.scss */
+.projects a {
+  display: block;
+}
+
+/* line 149, src/scss/partials/_global.scss */
+.employment {
+  grid-area: 4;
+  grid-column: span 2;
+}
+
+/* line 152, src/scss/partials/_global.scss */
+.employment .section:not(:last-of-type) {
+  margin-bottom: 112px;
+}
+
+/* line 155, src/scss/partials/_global.scss */
+.employment .dates {
+  margin-bottom: 20px;
+}

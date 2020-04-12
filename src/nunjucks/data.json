@@ -1,22 +1,58 @@
 {
-	"name" : "My Dope Project",
+	"general" : {
+		"title" : "Los Montoya Resume 2020",
+		"description" : "A resume website designed and built for the modern world."
+	},
+	"name" : "Carlos Montoya",
+	"avatar_url" : "/images/avatar.jpg",
+	"job_title" : "Design Director",
+	"education" : "Mentors, books, the internet — self taught.",
+	"contact" : {
+		"email" : "los@losmontoya.com",
+		"website" : "losmontoya.com",
+		"phone" : "435-764-0563",
+		"city_state" : "Redwood City, CA"
+	},
+	"bio" : "I'm a design director, software designer, and a really good friend.",
+	"employment" : [{
+		"role" : "Design Director",
+		"company" : "Twenty",
+		"start_date" : "August 2019",
+		"end_date" : "Present",
+		"duties" : "I led the merger of our combined products, customer experience, systems, culture, and collaborative design process in a successful merger via acquisition from Spring 2019 to Fall 2019.\n\nSocial media today is centered around sharing your experiences with your followers and “connecting” with people via digital engagement. As a result, people are consumed by their phones and using digital to replace real-life experiences. At Twenty our mission is to enable and enrich experiences by bringing people together. I own, manage, and coach our teams towards solutions which help bring people together by increasing moments of serendipity."
+	},{
+		"role" : "Creative Director",
+		"company" : "Mappen",
+		"start_date" : "August 2017",
+		"end_date" : "August 2019",
+		"duties" : "I drove the introduction, influence, and scale of our internal design operations, while ensuring that we matured the design capabilities of our broader product team.\n\nAt times I led from the front by designing as an IC for Mappen’s product experiences which included our mobile apps, marketing, and various brand touch points. Responsible for taking ideas from conception to production while continuosly improving design operations for both the design, product, and engineering teams."
+	},{
+		"role" : "Sr. Designer, Marketing Design Studio",
+		"company" : "Atlassian",
+		"start_date" : "April 2015",
+		"end_date" : "August 2017",
+		"duties" : "I partnered creatively and strategically with key stakeholders to bring the Atlassian vision to life in bold, unexpected ways.\n\nI worked with copywriters, data scientists, content and email marketers, brand designers, developers, PR, community managers, product and program managers to drive our internal design operations in building a design-led culture so that we could have an expansive decision making framework when designing our various product marketing web experiences at scale.\n\nI led the creation of our internal web design system."
+	},{
+		"role" : "UI / UX Product Designer",
+		"company" : "Pinger",
+		"start_date" : "January 2013",
+		"end_date" : "March 2015",
+		"duties" : "I led the full product design life cycle for our mobile user experiences, interface designs, animation designs, visual designs, interactive prototypes, typography, and screen layouts for iOS, Android, Windows Phone, desktop, web and other interactive media.\n\nNotable apps I led the design for include — Pinger, TextFree, Pop Messenger, Sideline, GIF Chat, and JukeVox."
+	}],
 	"projects" : [{
-		"title" : "OutboundEngine Website",
-		"dataproject" : "outboundengine"
-	}, {
-		"title" : "eGo Bikeshare",
-		"dataproject" : "ego"
-	}, {
-		"title" : "Scrypt Website",
-		"dataproject" : "scrypt"
-	}, {
-		"title" : "Runa Sustainability Report",
-		"dataproject" : "runa"
-	}, {
-		"title" : "Good Grade Pill",
-		"dataproject" : "goodgradepill"
-	}, {
-		"title" : "Posters",
-		"dataproject" : "posters"
+		"title" : "Twenty",
+		"url" : "#"
+	},{
+		"title" : "Mappen",
+		"url" : "#"
+	},{
+		"title" : "Atlassian",
+		"url" : "#"
+	},{
+		"title" : "Sideline",
+		"url" : "#"
+	},{
+		"title" : "Textfree",
+		"url" : "#"
 	}]
 }

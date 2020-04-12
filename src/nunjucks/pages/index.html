@@ -2,29 +2,65 @@
 
 {% block content %}
 
-{% include "partials/header.html" %}
 
-<section>
-	<div class="container">
-		<div class="row">
-			<div class="col-6">
-				<h1>{{ name }}</h1>
-				<h2>Heading 2</h2>
-				<h3>Heading 3</h3>
-				<h4>Heading 4</h4>
-				<h5>Heading 5</h5>
-				<h6>Heading 6</h6>
-				
-				<a href="#" class="btn">Primary Button</a>
-				<a href="#" class="btn btn-secondary">Secondary Button</a>
-				<a href="#" class="btn stroke">Primary Button</a>
-				<a href="#" class="btn btn-secondary stroke">Secondary Button</a>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro accusantium, delectus quae corporis quasi nemo architecto tenetur hic possimus. <a href="">error</a> nobis saepe ab voluptatem id dignissimos voluptatum, animi dolores.</p>
-			</div>
+
+<div class="container">
+	<svg id="dark-mode-trigger" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24 12a1 1 0 00-1-1h-3.906a.5.5 0 01-.49-.4 6.706 6.706 0 00-.948-2.284.5.5 0 01.065-.627l2.764-2.764a1 1 0 00-1.414-1.414l-2.764 2.768a.5.5 0 01-.627.065A6.706 6.706 0 0013.4 5.4a.5.5 0 01-.4-.49V1a1 1 0 00-2 0v3.906a.5.5 0 01-.4.49 6.706 6.706 0 00-2.284.948.5.5 0 01-.627-.065l-2.76-2.764a1 1 0 00-1.414 1.414l2.764 2.764a.5.5 0 01.065.627A6.706 6.706 0 005.4 10.6a.5.5 0 01-.49.4H1a1 1 0 000 2h3.907a.5.5 0 01.489.4 6.7 6.7 0 00.948 2.283.5.5 0 01-.065.627l-2.764 2.761a1 1 0 001.414 1.414l2.764-2.764a.5.5 0 01.627-.065 6.706 6.706 0 002.28.944.5.5 0 01.4.49V23a1 1 0 002 0v-3.906a.5.5 0 01.4-.49 6.706 6.706 0 002.284-.948.5.5 0 01.627.065l2.764 2.764a1 1 0 001.414-1.414l-2.764-2.764a.5.5 0 01-.065-.627c.452-.695.77-1.468.94-2.28a.5.5 0 01.49-.4H23a1 1 0 001-1zm-8.738 2.5A5.762 5.762 0 019.5 8.738c0-.442.052-.882.155-1.312a.5.5 0 01.322-.357 5.459 5.459 0 016.955 6.952.499.499 0 01-.354.321 5.686 5.686 0 01-1.316.158z" fill="#000"/></svg>
+
+	<div class="avatar">
+		<img src="{{ avatar_url }}" alt="Carlos's Photo">
+	</div>
+
+	<div class="education">
+		<h3 class="tinted">Education</h3>
+		<p class="large">{{ education }}</p>
+	</div>
+
+	<div class="name">
+		<h1>{{ name }}</h1>
+		<h2 class="tinted">{{ job_title }}</h2>
+	</div>
+
+	<div class="bio">
+		<h3>{{ bio | escape }}</h3>
+	</div>
+
+	<div class="contact tinted">
+		<a href="https://{{ contact.website }}" title="{{ name }}'s website">{{ contact.website }}</a>
+		<a href="mailto:{{ contact.email }}" title="{{ name }}'s website">{{ contact.email }}</a>
+		<a href="tel:{{ contact.phone }}" title="{{ name }}'s phone number">{{ contact.phone }}</a>
+		<a href="mailto:{{ contact.city_state }}" title="{{ name }}'s location">{{ contact.city_state }}</a>
+	</div>
+
+	<div class="projects">
+		<h2>Projects</h2>
+
+		{% for project in projects %}
+
+		<a href="{{ project.url }}" title="{{ project.title }}">{{ project.title }}</a>
+
+		{% endfor %}
+
+	</div>
+
+	<div class="employment">
+		
+		{% for job in employment %}
+
+		<div class="section">
+			<h2 class="role-company">{{ job.role }} <span class="tinted">at {{ job.company }}</span></h2>
+			<h4 class="dates tinted">{{ job.start_date }} &mdash; {{ job.end_date }}</h4>
+			<p class="duties tinted">{{ job.duties | striptags(true) | escape | nl2br }}</p>
 		</div>
-	</div>	
-</section>
 
-{% include "partials/footer.html" %}
+		{% endfor %}
+
+		<div class="section">
+			<p class="tinted">Additional history available upon request</p>
+		</div>
+	</div>
+</div>
+
+
 	
 {% endblock %}
