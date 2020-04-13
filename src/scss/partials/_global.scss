@@ -102,9 +102,11 @@ h1, h2, h3, h4, h5, h6, p, a {
   position: relative;
   @media screen and (max-width: 1320px) {
     grid-template-columns: repeat(2, 280px);
+    margin-left: 48px;
   }
   @media screen and (max-width: 680px) {
     grid-template-columns: 280px;
+    margin-left: 32px;
   }
 }
 
