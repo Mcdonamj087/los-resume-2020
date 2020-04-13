@@ -12,7 +12,7 @@
 	</div>
 
 	<div class="education">
-		<h3 class="tinted">Education</h3>
+		<h3>Education</h3>
 		<p class="large">{{ education }}</p>
 	</div>
 
@@ -25,7 +25,7 @@
 		<h3>{{ bio | escape }}</h3>
 	</div>
 
-	<div class="contact tinted">
+	<div class="contact">
 		<a href="https://{{ contact.website }}" title="{{ name }}'s website">{{ contact.website }}</a>
 		<a href="mailto:{{ contact.email }}" title="{{ name }}'s website">{{ contact.email }}</a>
 		<a href="tel:{{ contact.phone }}" title="{{ name }}'s phone number">{{ contact.phone }}</a>
@@ -48,7 +48,7 @@
 		{% for job in employment %}
 
 		<div class="section">
-			<h2 class="role-company">{{ job.role }} <span class="tinted">at {{ job.company }}</span></h2>
+			<h2 class="role-company">{{ job.role }} <span>at {{ job.company }}</span></h2>
 			<h4 class="dates tinted">{{ job.start_date }} &mdash; {{ job.end_date }}</h4>
 			<p class="duties tinted">{{ job.duties | striptags(true) | escape | nl2br }}</p>
 		</div>

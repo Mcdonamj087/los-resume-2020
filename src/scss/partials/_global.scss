@@ -27,6 +27,14 @@ body {
     }
     .bio {
       background: rgba(255, 255, 255, .03);
+      @media screen and (min-width: 681px) and (max-width: 1320px) {
+        background: none;
+      }
+    }
+    .education {
+      @media screen and (min-width: 681px) and (max-width: 1320px) {
+        background: rgba(255, 255, 255, .03);
+      }
     }
   }
 }
@@ -43,6 +51,10 @@ h1 {
   font-size: $h1;
   line-height: $h1-lineheight;
   font-weight: 500;
+  @media screen and (max-width: 680px) {
+    font-size: $h2;
+    line-height: 29px;
+  }
 }
 h2 {
   font-weight: 500;
@@ -50,15 +62,19 @@ h2 {
 h2, h3, h4, h5, h6, p.large {
   font-size: $h2;
   line-height: $h2-lineheight;
+  @media screen and (max-width: 680px) {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 
 p, a {
   font-size: $paragraph-size;
   line-height: $paragraph-line-height;
   opacity: .6;
-  &.small {
+  @media screen and (max-width: 680px) {
     font-size: 14px;
-    line-height: 24px;
+    line-height: 22px;
   }
 }
 
@@ -84,6 +100,12 @@ h1, h2, h3, h4, h5, h6, p, a {
   grid-auto-rows: minmax(280px, auto); 
   grid-gap: 24px;
   position: relative;
+  @media screen and (max-width: 1320px) {
+    grid-template-columns: repeat(2, 280px);
+  }
+  @media screen and (max-width: 680px) {
+    grid-template-columns: 280px;
+  }
 }
 
 
@@ -92,6 +114,14 @@ h1, h2, h3, h4, h5, h6, p, a {
   path {
     fill: var(--text-color);
     transition: fill .3s ease-out;
+  }
+  @media screen and (min-width: 681px) and (max-width: 1320px) {
+    position: absolute;
+    grid-area: 2 / 2;
+    right: 0;
+  }
+  @media screen and (max-width: 680px) {
+    z-index: 100;
   }
 }
 
@@ -103,11 +133,59 @@ h1, h2, h3, h4, h5, h6, p, a {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    filter: grayscale(1);
+  }
+  
+}
+
+.name {
+  @media screen and (max-width: 1320px) {
+    grid-area: 1 / 2;
+  }
+  @media screen and (max-width: 680px) {
+    position: absolute;
+    grid-area: 1;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
   }
 }
 
 .education {
   grid-column: 4;
+  @media screen and (max-width: 1320px) {
+    grid-area: 3 / span 2;
+    transition: background .3s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+  @media screen and (min-width: 681px) and (max-width: 1320px) {
+    background: rgba($black, .03);
+  }
+  @media screen and (max-width: 680px) {
+    grid-area: 3;
+  }
+  h3 {
+    @extend .tinted;
+    @media screen and (max-width: 1320px) {
+      opacity: .6;
+    }
+    @media screen and (max-width: 680px) {
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+  }
+  p {
+    @media screen and (max-width: 1320px) {
+      max-width: 280px;
+      opacity: .3;
+    }
+    @media screen and (max-width: 680px) {
+      opacity: .6;
+    }
+  }
 }
 
 .bio {
@@ -116,6 +194,17 @@ h1, h2, h3, h4, h5, h6, p, a {
   display: flex;
   align-items: flex-end;
   transition: background .3s ease-out;
+  @media screen and (max-width: 1320px) {
+    grid-area: 2 / span 2;
+    transition: none;
+  }
+  @media screen and (max-width: 680px) {
+    grid-area: 5;
+    align-items: flex-start;
+  }
+  @media screen and (min-width: 681px) and (max-width: 1320px) {
+    background: none;
+  }
   h3 {
     max-width: 80%;
   }
@@ -125,11 +214,30 @@ h1, h2, h3, h4, h5, h6, p, a {
   position: absolute;
   grid-area: 2 / 4;
   right: 0;
+  opacity: .5;
   a {
     display: block;
     text-align: right;
     font-size: 14px;
     line-height: 24px;
+    @media screen and (min-width: 681px) {
+      text-align: left;
+    }
+  }
+  @media screen and (max-width: 1320px) {
+    grid-area: 1 / 2;
+    left: 0;
+    right: unset;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+  @media screen and (max-width: 680px) {
+    grid-area: 1;
+    justify-content: start;
+    right: 0;
+    left: unset;
   }
 }
 
@@ -143,6 +251,16 @@ h1, h2, h3, h4, h5, h6, p, a {
     display: block;
     @extend p.large;
     @extend .tinted;
+    @media screen and (max-width: 680px) {
+      opacity: .6
+    }
+  }
+  @media screen and (max-width: 1320px) {
+    grid-row: 4;
+    grid-column: 2 / span 1;
+  }
+  @media screen and (max-width: 680px) {
+    grid-area: 4;
   }
 }
 
@@ -151,8 +269,41 @@ h1, h2, h3, h4, h5, h6, p, a {
   grid-column: span 2;
   .section:not(:last-of-type) {
     margin-bottom: 112px;
+    @media screen and (max-width: 680px) {
+      margin-bottom: 50px;
+    }
   }
   .dates {
     margin-bottom: 20px;
+    @media screen and (max-width: 680px) {
+      margin-bottom: 16px;
+    }
+  }
+  .duties {
+    text-align: justify;
+  }
+  @media screen and (max-width: 1320px) {
+    grid-area: 6 / span 2;
+  }
+  @media screen and (max-width: 680px) {
+    grid-area: 6;
+  }
+  .role-company {
+    span {
+      opacity: .5;
+    }
+  }
+  .role-company,
+  .dates {
+    @media screen and (max-width: 680px) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  .role-company {
+    @media screen and (max-width: 680px) {
+      width: 90%;
+    }
   }
 }
