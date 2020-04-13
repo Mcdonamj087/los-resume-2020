@@ -4,7 +4,7 @@
 		"description" : "A resume website designed and built for the modern world."
 	},
 	"name" : "Carlos Montoya",
-	"avatar_url" : "/images/avatar.jpg",
+	"avatar_url" : "images/avatar.jpg",
 	"job_title" : "Design Director",
 	"education" : "Mentors, books, the internet — self taught.",
 	"contact" : {
