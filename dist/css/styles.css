@@ -189,80 +189,87 @@ p, a {
 /* line 81, src/scss/partials/_global.scss */
 a {
   color: var(--text-color);
+  opacity: .3;
   text-decoration: none;
 }
 
-/* line 86, src/scss/partials/_global.scss */
-.tinted, .education h3, .projects a {
-  opacity: 0.3;
+/* line 85, src/scss/partials/_global.scss */
+a:hover {
+  opacity: .6;
 }
 
 /* line 90, src/scss/partials/_global.scss */
+.tinted, .education h3 {
+  opacity: 0.3;
+}
+
+/* line 94, src/scss/partials/_global.scss */
 h1, h2, h3, h4, h5, h6, p, a {
   transition: color .3s ease-out;
 }
 
-/* line 96, src/scss/partials/_global.scss */
+/* line 100, src/scss/partials/_global.scss */
 .container {
-  margin: 64px auto 268px 64px;
-  display: inline-grid;
+  margin: 64px auto 268px;
+  display: grid;
   grid-template-columns: repeat(4, 280px);
   grid-auto-rows: minmax(280px, auto);
   grid-gap: 24px;
   position: relative;
+  justify-content: center;
 }
 
 @media screen and (max-width: 1320px) {
-  /* line 96, src/scss/partials/_global.scss */
+  /* line 100, src/scss/partials/_global.scss */
   .container {
     grid-template-columns: repeat(2, 280px);
-    margin-left: 48px;
+    margin: 64px 48px 268px;
   }
 }
 
 @media screen and (max-width: 680px) {
-  /* line 96, src/scss/partials/_global.scss */
+  /* line 100, src/scss/partials/_global.scss */
   .container {
     grid-template-columns: 280px;
-    margin-left: 32px;
+    margin: 64px 32px 268px;
   }
 }
 
-/* line 114, src/scss/partials/_global.scss */
+/* line 119, src/scss/partials/_global.scss */
 #dark-mode-trigger {
   cursor: pointer;
 }
 
-/* line 116, src/scss/partials/_global.scss */
+/* line 121, src/scss/partials/_global.scss */
 #dark-mode-trigger path {
   fill: var(--text-color);
   transition: fill .3s ease-out;
 }
 
 @media screen and (min-width: 681px) and (max-width: 1320px) {
-  /* line 114, src/scss/partials/_global.scss */
+  /* line 119, src/scss/partials/_global.scss */
   #dark-mode-trigger {
     position: absolute;
     grid-area: 2 / 2;
-    right: 0;
+    left: 256px;
   }
 }
 
 @media screen and (max-width: 680px) {
-  /* line 114, src/scss/partials/_global.scss */
+  /* line 119, src/scss/partials/_global.scss */
   #dark-mode-trigger {
     z-index: 100;
   }
 }
 
-/* line 130, src/scss/partials/_global.scss */
+/* line 135, src/scss/partials/_global.scss */
 .avatar {
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
 
-/* line 133, src/scss/partials/_global.scss */
+/* line 138, src/scss/partials/_global.scss */
 .avatar img {
   width: 100%;
   height: 100%;
@@ -275,14 +282,14 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 @media screen and (max-width: 1320px) {
-  /* line 143, src/scss/partials/_global.scss */
+  /* line 148, src/scss/partials/_global.scss */
   .name {
     grid-area: 1 / 2;
   }
 }
 
 @media screen and (max-width: 680px) {
-  /* line 143, src/scss/partials/_global.scss */
+  /* line 148, src/scss/partials/_global.scss */
   .name {
     position: absolute;
     grid-area: 1;
@@ -290,16 +297,20 @@ h1, h2, h3, h4, h5, h6, p, a {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    left: 50%;
+    transform: translateX(-140px);
+    max-width: 280px;
+    width: 100%;
   }
 }
 
-/* line 157, src/scss/partials/_global.scss */
+/* line 166, src/scss/partials/_global.scss */
 .education {
   grid-column: 4;
 }
 
 @media screen and (max-width: 1320px) {
-  /* line 157, src/scss/partials/_global.scss */
+  /* line 166, src/scss/partials/_global.scss */
   .education {
     grid-area: 3 / span 2;
     transition: background .3s ease-out;
@@ -310,28 +321,28 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 @media screen and (min-width: 681px) and (max-width: 1320px) {
-  /* line 157, src/scss/partials/_global.scss */
+  /* line 166, src/scss/partials/_global.scss */
   .education {
     background: rgba(0, 0, 0, 0.03);
   }
 }
 
 @media screen and (max-width: 680px) {
-  /* line 157, src/scss/partials/_global.scss */
+  /* line 166, src/scss/partials/_global.scss */
   .education {
     grid-area: 3;
   }
 }
 
 @media screen and (max-width: 1320px) {
-  /* line 172, src/scss/partials/_global.scss */
+  /* line 181, src/scss/partials/_global.scss */
   .education h3 {
     opacity: .6;
   }
 }
 
 @media screen and (max-width: 680px) {
-  /* line 172, src/scss/partials/_global.scss */
+  /* line 181, src/scss/partials/_global.scss */
   .education h3 {
     margin-bottom: 8px;
     font-weight: 500;
@@ -339,7 +350,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 @media screen and (max-width: 1320px) {
-  /* line 182, src/scss/partials/_global.scss */
+  /* line 191, src/scss/partials/_global.scss */
   .education p {
     max-width: 280px;
     opacity: .3;
@@ -347,13 +358,13 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 @media screen and (max-width: 680px) {
-  /* line 182, src/scss/partials/_global.scss */
+  /* line 191, src/scss/partials/_global.scss */
   .education p {
     opacity: .6;
   }
 }
 
-/* line 193, src/scss/partials/_global.scss */
+/* line 202, src/scss/partials/_global.scss */
 .bio {
   grid-column: 3 / span 2;
   background: rgba(0, 0, 0, 0.03);
@@ -363,7 +374,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 @media screen and (max-width: 1320px) {
-  /* line 193, src/scss/partials/_global.scss */
+  /* line 202, src/scss/partials/_global.scss */
   .bio {
     grid-area: 2 / span 2;
     transition: none;
@@ -371,7 +382,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 @media screen and (max-width: 680px) {
-  /* line 193, src/scss/partials/_global.scss */
+  /* line 202, src/scss/partials/_global.scss */
   .bio {
     grid-area: 5;
     align-items: flex-start;
@@ -379,88 +390,80 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 @media screen and (min-width: 681px) and (max-width: 1320px) {
-  /* line 193, src/scss/partials/_global.scss */
+  /* line 202, src/scss/partials/_global.scss */
   .bio {
     background: none;
   }
 }
 
-/* line 210, src/scss/partials/_global.scss */
+/* line 219, src/scss/partials/_global.scss */
 .bio h3 {
   max-width: 80%;
 }
 
-/* line 215, src/scss/partials/_global.scss */
+/* line 224, src/scss/partials/_global.scss */
 .contact {
   position: absolute;
   grid-area: 2 / 4;
-  right: 0;
-  opacity: .5;
-}
-
-/* line 220, src/scss/partials/_global.scss */
-.contact a {
-  display: block;
+  transform: translateX(140px);
   text-align: right;
-  font-size: 14px;
-  line-height: 24px;
-}
-
-@media screen and (min-width: 681px) {
-  /* line 220, src/scss/partials/_global.scss */
-  .contact a {
-    text-align: left;
-  }
 }
 
 @media screen and (max-width: 1320px) {
-  /* line 215, src/scss/partials/_global.scss */
+  /* line 224, src/scss/partials/_global.scss */
   .contact {
     grid-area: 1 / 2;
-    left: 0;
-    right: unset;
     height: 280px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    text-align: left;
+    transform: none;
   }
 }
 
 @media screen and (max-width: 680px) {
-  /* line 215, src/scss/partials/_global.scss */
+  /* line 224, src/scss/partials/_global.scss */
   .contact {
     grid-area: 1;
     justify-content: flex-start;
-    right: 0;
-    left: unset;
+    left: 50%;
+    text-align: right;
   }
 }
 
-/* line 246, src/scss/partials/_global.scss */
+/* line 244, src/scss/partials/_global.scss */
+.contact a {
+  display: block;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/* line 252, src/scss/partials/_global.scss */
 .projects {
   grid-area: 4;
   grid-column: span 2;
 }
 
-/* line 249, src/scss/partials/_global.scss */
+/* line 255, src/scss/partials/_global.scss */
 .projects > * {
   margin-bottom: 8px;
 }
 
-/* line 252, src/scss/partials/_global.scss */
+/* line 258, src/scss/partials/_global.scss */
 .projects a {
   display: block;
 }
 
 @media screen and (max-width: 680px) {
-  /* line 252, src/scss/partials/_global.scss */
+  /* line 258, src/scss/partials/_global.scss */
   .projects a {
     opacity: .6;
   }
 }
 
 @media screen and (max-width: 1320px) {
-  /* line 246, src/scss/partials/_global.scss */
+  /* line 252, src/scss/partials/_global.scss */
   .projects {
     grid-row: 4;
     grid-column: 2 / span 1;
@@ -468,68 +471,68 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 @media screen and (max-width: 680px) {
-  /* line 246, src/scss/partials/_global.scss */
+  /* line 252, src/scss/partials/_global.scss */
   .projects {
     grid-area: 4;
   }
 }
 
-/* line 269, src/scss/partials/_global.scss */
+/* line 274, src/scss/partials/_global.scss */
 .employment {
   grid-area: 4;
   grid-column: span 2;
 }
 
-/* line 272, src/scss/partials/_global.scss */
+/* line 277, src/scss/partials/_global.scss */
 .employment .section:not(:last-of-type) {
   margin-bottom: 112px;
 }
 
 @media screen and (max-width: 680px) {
-  /* line 272, src/scss/partials/_global.scss */
+  /* line 277, src/scss/partials/_global.scss */
   .employment .section:not(:last-of-type) {
     margin-bottom: 50px;
   }
 }
 
-/* line 278, src/scss/partials/_global.scss */
+/* line 283, src/scss/partials/_global.scss */
 .employment .dates {
   margin-bottom: 20px;
 }
 
 @media screen and (max-width: 680px) {
-  /* line 278, src/scss/partials/_global.scss */
+  /* line 283, src/scss/partials/_global.scss */
   .employment .dates {
     margin-bottom: 16px;
   }
 }
 
-/* line 284, src/scss/partials/_global.scss */
+/* line 289, src/scss/partials/_global.scss */
 .employment .duties {
   text-align: justify;
 }
 
 @media screen and (max-width: 1320px) {
-  /* line 269, src/scss/partials/_global.scss */
+  /* line 274, src/scss/partials/_global.scss */
   .employment {
     grid-area: 6 / span 2;
   }
 }
 
 @media screen and (max-width: 680px) {
-  /* line 269, src/scss/partials/_global.scss */
+  /* line 274, src/scss/partials/_global.scss */
   .employment {
     grid-area: 6;
   }
 }
 
-/* line 294, src/scss/partials/_global.scss */
+/* line 299, src/scss/partials/_global.scss */
 .employment .role-company span {
   opacity: .5;
 }
 
 @media screen and (max-width: 680px) {
-  /* line 298, src/scss/partials/_global.scss */
+  /* line 303, src/scss/partials/_global.scss */
   .employment .role-company,
   .employment .dates {
     font-size: 14px;
@@ -538,7 +541,7 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 @media screen and (max-width: 680px) {
-  /* line 306, src/scss/partials/_global.scss */
+  /* line 311, src/scss/partials/_global.scss */
   .employment .role-company {
     width: 90%;
   }

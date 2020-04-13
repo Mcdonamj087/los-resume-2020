@@ -28,7 +28,7 @@
 	<div class="contact">
 		<a href="https://{{ contact.website }}" title="{{ name }}'s website">{{ contact.website }}</a>
 		<a href="mailto:{{ contact.email }}" title="{{ name }}'s website">{{ contact.email }}</a>
-		<a href="tel:{{ contact.phone }}" title="{{ name }}'s phone number">{{ contact.phone }}</a>
+		<a href="sms:{{ contact.phone }}" title="{{ name }}'s phone number">{{ contact.phone }}</a>
 		<a href="mailto:{{ contact.city_state }}" title="{{ name }}'s location">{{ contact.city_state }}</a>
 	</div>
 
@@ -37,7 +37,7 @@
 
 		{% for project in projects %}
 
-		<a href="{{ project.url }}" title="{{ project.title }}">{{ project.title }}</a>
+		<a href="{{ project.url }}" title="{{ project.title }}" target="_blank">{{ project.title }}</a>
 
 		{% endfor %}
 

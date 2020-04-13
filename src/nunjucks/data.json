@@ -41,18 +41,18 @@
 	}],
 	"projects" : [{
 		"title" : "Twenty",
-		"url" : "#"
+		"url" : "https://apps.apple.com/app/apple-store/id1254239111"
 	},{
 		"title" : "Mappen",
-		"url" : "#"
+		"url" : "https://mappen.webflow.io/"
 	},{
 		"title" : "Atlassian",
-		"url" : "#"
+		"url" : "https://www.atlassian.com/"
 	},{
 		"title" : "Sideline",
-		"url" : "#"
+		"url" : "https://apps.apple.com/us/app/sideline-2nd-phone-number/id1012032539"
 	},{
 		"title" : "Textfree",
-		"url" : "#"
+		"url" : "https://apps.apple.com/us/app/text-free-texting-calling/id399355755"
 	}]
 }

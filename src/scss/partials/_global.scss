@@ -80,7 +80,11 @@ p, a {
 
 a {
   color: var(--text-color);
+  opacity: .3;
   text-decoration: none;
+  &:hover {
+    opacity: .6;
+  }
 }
 
 .tinted {
@@ -94,19 +98,20 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 
 .container {
-  margin: 64px auto 268px 64px;
-  display: inline-grid;
+  margin: 64px auto 268px;
+  display: grid;
   grid-template-columns: repeat(4, 280px);
   grid-auto-rows: minmax(280px, auto); 
   grid-gap: 24px;
   position: relative;
+  justify-content: center;
   @media screen and (max-width: 1320px) {
     grid-template-columns: repeat(2, 280px);
-    margin-left: 48px;
+    margin: 64px 48px 268px;
   }
   @media screen and (max-width: 680px) {
     grid-template-columns: 280px;
-    margin-left: 32px;
+    margin: 64px 32px 268px;
   }
 }
 
@@ -120,7 +125,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   @media screen and (min-width: 681px) and (max-width: 1320px) {
     position: absolute;
     grid-area: 2 / 2;
-    right: 0;
+    left: 256px;
   }
   @media screen and (max-width: 680px) {
     z-index: 100;
@@ -151,6 +156,10 @@ h1, h2, h3, h4, h5, h6, p, a {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    left: 50%;
+    transform: translateX(-140px);
+    max-width: 280px;
+    width: 100%;
   }
 }
 
@@ -215,31 +224,28 @@ h1, h2, h3, h4, h5, h6, p, a {
 .contact {
   position: absolute;
   grid-area: 2 / 4;
-  right: 0;
-  opacity: .5;
-  a {
-    display: block;
-    text-align: right;
-    font-size: 14px;
-    line-height: 24px;
-    @media screen and (min-width: 681px) {
-      text-align: left;
-    }
-  }
+  transform: translateX(140px);
+  text-align: right;
   @media screen and (max-width: 1320px) {
     grid-area: 1 / 2;
-    left: 0;
-    right: unset;
     height: 280px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    text-align: left;
+    transform: none
   }
   @media screen and (max-width: 680px) {
     grid-area: 1;
     justify-content: flex-start;
-    right: 0;
-    left: unset;
+    left: 50%;
+    text-align: right;
+  }
+  a {
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    
   }
 }
 
@@ -252,7 +258,6 @@ h1, h2, h3, h4, h5, h6, p, a {
   a {
     display: block;
     @extend p.large;
-    @extend .tinted;
     @media screen and (max-width: 680px) {
       opacity: .6
     }
