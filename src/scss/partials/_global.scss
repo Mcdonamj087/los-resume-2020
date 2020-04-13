@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5, h6, p, a {
     height: 280px;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 
@@ -159,7 +159,7 @@ h1, h2, h3, h4, h5, h6, p, a {
     transition: background .3s ease-out;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
   }
   @media screen and (min-width: 681px) and (max-width: 1320px) {
     background: rgba($black, .03);
@@ -231,11 +231,11 @@ h1, h2, h3, h4, h5, h6, p, a {
     height: 280px;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
   }
   @media screen and (max-width: 680px) {
     grid-area: 1;
-    justify-content: start;
+    justify-content: flex-start;
     right: 0;
     left: unset;
   }
